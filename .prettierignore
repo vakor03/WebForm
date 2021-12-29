@@ -1,0 +1,5 @@
+*.css
+.vs
+bin
+obj
+dist

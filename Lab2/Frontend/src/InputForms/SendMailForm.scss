@@ -1,0 +1,29 @@
+* {
+    --button-background-color: #827ffe;
+    --button-text-color: #fff;
+    --button-margin: 10px;
+    --button-width: 150px;
+    --button-height: 50px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+}
+
+@media (max-width: 600px) {
+    form {
+        width: 90%;
+    }
+}
+
+.button {
+    align-self: center;
+    background-color: var(--button-background-color);
+    color: var(--button-text-color);
+    cursor: pointer;
+    height: var(--button-height);
+    margin: var(--button-margin);
+    width: var(--button-width);
+}

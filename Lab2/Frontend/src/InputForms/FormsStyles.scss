@@ -1,0 +1,53 @@
+* {
+    --input-border: 0;
+    --text-color: #403866;
+    --text-style: Ubuntu-Bold;
+    --label-text-size: 32px;
+    --input-text-size: 18px;
+    --input-border-radius: 31px;
+    --input-background-color: #fff;
+    --input-text-color: #8f8fa1;
+    --top-margin-elements: 15px;
+    --input-height: 62px;
+    --input-width: 500px;
+    --top-padding: 0;
+    --left-padding: 35px;
+    --text-area-height: 150px;
+}
+
+label {
+    align-self: flex-start;
+    color: var(--text-color);
+    font-family: var(--text-style);
+    font-size: var(--label-text-size);
+    margin-top: var(--top-margin-elements);
+}
+
+input,
+textarea {
+    background-color: var(--input-background-color);
+    border: var(--input-border);
+    border-radius: var(--input-border-radius);
+    color: var(--input-text-color);
+    display: block;
+    font-family: var(--text-style);
+    font-size: var(--input-text-size);
+    height: var(--input-height);
+    outline: var(--input-border);
+    padding: var(--top-padding) var(--left-padding);
+    position: relative;
+    width: var(--input-width);
+}
+
+@media (max-width: 600px) {
+    input,
+    textarea {
+        width: 80%;
+    }
+}
+
+textarea {
+    min-height: var(--text-area-height);
+    min-width: var(--input-height);
+    resize: vertical;
+}

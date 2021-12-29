@@ -1,0 +1,37 @@
+* {
+    --default-background-color: #f2f2f2;
+    --text-style: Ubuntu-Bold;
+    --text-color: #403866;
+    --header-margin: 0;
+    --header-text-size: 60px;
+}
+
+:root {
+    background-color: var(--default-background-color);
+}
+
+.container {
+    width: 100%;
+}
+
+div {
+    align-items: center;
+    background-color: var(--default-background-color);
+    display: flex;
+    flex-direction: column;
+    height: auto;
+}
+
+header {
+    text-align: center;
+    h1 {
+        color: var(--text-color);
+        font-family: var(--text-style);
+        font-size: var(--header-text-size);
+        margin: var(--header-margin);
+    }
+}
+
+main {
+    width: 100%;
+}
