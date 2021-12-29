@@ -1,5 +1,5 @@
 import React from 'react';
-import './FormsStyles.scss'
+import './FormsStyles.scss';
 
 class TextAreaField extends React.Component {
     constructor(props) {

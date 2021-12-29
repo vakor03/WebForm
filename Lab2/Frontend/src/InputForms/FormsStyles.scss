@@ -49,7 +49,6 @@ textarea {
 textarea {
     min-height: var(--text-area-height);
     min-width: var(--input-height);
-    resize: vertical;
     padding: 30px;
+    resize: vertical;
 }
-
