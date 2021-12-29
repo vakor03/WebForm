@@ -5,7 +5,8 @@ import TextAreaField from './TextAreaField';
 import Spinner from '../Popup/Spinner';
 import Popup from '../Popup/Popup';
 import Message from '../Popup/Message';
-import axios from 'axios';
+import{ init } from 'emailjs-com';
+import * as emailjs from "emailjs-com";
 
 class SendMailForm extends React.Component {
     constructor(props) {
@@ -20,47 +21,49 @@ class SendMailForm extends React.Component {
             email: '',
             message: '',
         };
+        init("user_gUtuBxGEIMu06UvjR4R9u");
     }
 
     handleSubmit = event => {
         event.preventDefault();
-        const { name, email, message } = this.state;
-        this.setState({ isRequest: true });
-        this.setState({ isPopupOnScreen: true });
-        axios
-            .post('/api', {
-                name,
-                email,
-                message,
-            })
-            .then(res => {
+        const sendMail = this;
+        const templateParams = {
+            to_name: this.state.name,
+            message: this.state.message,
+            to_email: this.state.email
+        };
+
+        this.setState({isRequest: true});
+        this.setState({isPopupOnScreen: true});
+        emailjs.send('service_yvmj3xy', 'template_7sonasa', templateParams)
+            .then((response) =>{
                 this.setState({
-                    errorMessages: res.data.errorMessages,
+                    errorMessages: ['Successfully'],
                     isRequest: false,
                     isSuccess: true,
                     name: '',
                     email: '',
                     message: '',
                 });
-            })
-            .catch(error => {
+            }, (error)=> {
                 this.setState({
                     isRequest: false,
                     isSuccess: false,
                 });
 
-                if (!error?.response?.data) {
+                if (!error?.message) {
                     this.setState({
                         errorMessages: ['Something went wrong...'],
                     });
                     return;
                 }
                 this.setState({
-                    errorMessages: error.response.data.errorMessages ?? [
+                    errorMessages: error.message ?? [
                         'Something went wrong...',
                     ],
                 });
             });
+
     };
 
     onOkClicked = () => {

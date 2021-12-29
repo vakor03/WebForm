@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from './FormsStyles.scss';
+import './FormsStyles.scss'
 
 class TextAreaField extends React.Component {
     constructor(props) {
@@ -10,7 +10,7 @@ class TextAreaField extends React.Component {
         const { onChange, value } = this.props;
 
         return (
-            <div>
+            <div className={'textAreaWrapper'}>
                 <label>{this.props.label}</label>
                 <textarea
                     placeholder={this.props.defaultValue}
