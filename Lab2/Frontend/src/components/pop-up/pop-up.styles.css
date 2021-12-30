@@ -1,0 +1,37 @@
+.popUp {
+    align-items: center;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    margin: 0;
+    opacity: 0;
+    padding: 0;
+    pointer-events: none;
+    position: fixed;
+    transition: 0.5s;
+    width: 100vw;
+}
+
+.popUp.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.popUp_content {
+    align-content: center;
+    background: linear-gradient(
+        90deg,
+        rgba(93, 12, 255, 1) 0%,
+        rgba(155, 0, 250, 1) 100%
+    );
+    border-radius: 12px;
+    color: var(--label-text-color);
+    padding: 20px;
+}
+
+.popUp-icon {
+    cursor: pointer;
+    left: 0;
+    text-align: left;
+    top: 0;
+}

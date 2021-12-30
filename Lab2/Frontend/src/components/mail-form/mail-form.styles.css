@@ -1,0 +1,66 @@
+:root {
+    --form-padding: 12px;
+    --form-el-border-radius: 4px;
+    --form-el-border-color: #ccc;
+    --form-el-border-thickness: 1px;
+    --form-el-margin-top: 6px;
+    --form-el-margin-bot: 16px;
+
+    --submit-text-color: #fff;
+    --submit-background-color: rgba(255, 118, 20, 0.8);
+    --submit-paddings-vertical: 12px;
+    --submit-paddings-horizontal: 20px;
+
+    --label-text-color: #fff;
+
+    --container-background: linear-gradient(
+        90deg,
+        rgba(20, 159, 255, 0.5) 0%,
+        rgba(17, 122, 255, 0.5) 100%
+    );
+    --container-padding: 20px;
+}
+
+.text,
+select,
+textarea {
+    border: var(--form-el-border-thickness) solid var(--form-el-border-color);
+    border-radius: var(--form-el-border-radius);
+    box-sizing: border-box;
+    margin-bottom: var(--form-el-margin-bot);
+    margin-top: var(--form-el-margin-top);
+    padding: var(--form-padding);
+    resize: vertical;
+    width: 100%;
+}
+
+.submit {
+    background-color: var(--submit-background-color);
+    border-radius: var(--form-el-border-radius);
+    color: var(--submit-text-color);
+    cursor: pointer;
+    padding: var(--submit-paddings-vertical) var(--submit-paddings-horizontal);
+}
+
+label {
+    color: var(--label-text-color);
+}
+
+/*input[type='submit']:hover {*/
+/*    background-color: #45a049;*/
+/*}*/
+
+.container {
+    background: var(--container-background);
+    border-radius: 10px;
+    margin-left: 20%;
+    margin-right: 20%;
+    opacity: 0.3;
+    padding: var(--container-padding);
+    pointer-events: none;
+}
+
+.container.active {
+    opacity: 1;
+    pointer-events: all;
+}

@@ -1,6 +1,17 @@
+:root {
+    --body-font-family: 'Roboto';
+    --body-text-color: #fff;
+    --body-bg-color: #23272a;
+}
 html,
 body {
+    background-color: var(--body-bg-color);
+    color: var(--body-text-color);
+    font-family: var(--body-font-family);
+    font-size: 1.15em;
     height: 100%;
     margin: 0;
-    background-color: blue;
+    min-height: 100%;
+    padding: 0;
+    text-align: center;
 }

@@ -10,7 +10,7 @@
         "lint:fix": "eslint . --fix --ignore-path .gitignore",
         "format": "prettier --ignore-path .gitignore --check .",
         "format:fix": "prettier --ignore-path .gitignore . --write",
-        "lint:style": "stylelint --ignore-path .gitignore \"./**/*.scss\"",
+        "lint:style": "stylelint --ignore-path .gitignore \"./**/*.css\"",
         "lint:style:fix": "npm run lint:style --ignore-path .gitignore -- --fix",
         "prepare": "husky install",
         "sass": "sass .",
@@ -54,8 +54,8 @@
         "webpack-dev-server": "^4.3.0"
     },
     "dependencies": {
+        "@emailjs/browser": "^3.3.1",
         "axios": "^0.21.4",
-        "emailjs-com": "^3.2.0",
         "nodemailer": "^6.7.0",
         "path": "^0.12.7",
         "react": "^17.0.2",
