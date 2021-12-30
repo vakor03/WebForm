@@ -36,6 +36,7 @@ textarea {
 
 .submit {
     background-color: var(--submit-background-color);
+    border: 1px solid var(--submit-background-color);
     border-radius: var(--form-el-border-radius);
     color: var(--submit-text-color);
     cursor: pointer;
