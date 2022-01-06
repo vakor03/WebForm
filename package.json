@@ -1,12 +1,12 @@
 {
-    "name": "web-labs",
+    "name": "web-form",
     "homepage": "http://vakor03.github.io/WebForm",
     "version": "1.0.0",
     "description": "",
     "main": "index.js",
     "module": "module.js",
     "scripts": {
-        "lint": "eslint . --ignore-path .gitignore --no-error-on-unmatched-pattern",
+        "lint": "eslint . --ignore-path .gitignore",
         "lint:fix": "eslint . --fix --ignore-path .gitignore",
         "format": "prettier --ignore-path .gitignore --check .",
         "format:fix": "prettier --ignore-path .gitignore . --write",
@@ -15,7 +15,6 @@
         "prepare": "husky install",
         "sass": "sass .",
         "start": "webpack-dev-server --hot --open --mode development",
-        "express": "node functions/index.js",
         "build": "webpack --config webpack.config.js --mode production",
         "predeploy": "npm run build",
         "deploy": "gh-pages -d Lab2/Frontend/dist"
@@ -36,7 +35,6 @@
         "eslint-plugin-react": "^7.26.0",
         "eslint-plugin-sonarjs": "^0.10.0",
         "file-loader": "^6.2.0",
-        "firebase-admin": "^10.0.0",
         "gh-pages": "^3.2.3",
         "html-webpack-plugin": "^5.4.0",
         "husky": "^7.0.4",
@@ -55,11 +53,8 @@
     },
     "dependencies": {
         "@emailjs/browser": "^3.3.1",
-        "axios": "^0.21.4",
-        "nodemailer": "^6.7.0",
         "path": "^0.12.7",
         "react": "^17.0.2",
-        "react-dom": "^17.0.2",
-        "sanitize-html": "^2.5.3"
+        "react-dom": "^17.0.2"
     }
 }

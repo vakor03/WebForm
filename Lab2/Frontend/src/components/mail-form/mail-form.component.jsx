@@ -2,7 +2,6 @@ import React from 'react';
 import './mail-form.styles.css';
 import Popup from '../pop-up/pop-up.component';
 import Spinner from '../spinner/spinner.component';
-import { init } from '@emailjs/browser';
 import * as emailjs from '@emailjs/browser';
 
 export class MailForm extends React.Component {
