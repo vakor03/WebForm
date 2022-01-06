@@ -18,7 +18,8 @@ export class MailForm extends React.Component {
             email: '',
             message: '',
         };
-        init('user_gUtuBxGEIMu06UvjR4R9u');
+        const user_id_secret = process.env.REACT_EMAILJS_USER_TOKEN;
+        init(user_id_secret);
     }
 
     handleSubmit = event => {
