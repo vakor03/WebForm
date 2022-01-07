@@ -19,7 +19,7 @@ export class MailForm extends React.Component {
             message: '',
         };
         const user_id_secret = process.env.REACT_EMAILJS_USER_TOKEN;
-        init(user_id_secret);
+        emailjs.init(user_id_secret);
     }
 
     handleSubmit = event => {
@@ -33,7 +33,11 @@ export class MailForm extends React.Component {
         this.setState({ isRequest: true });
         this.setState({ isPopupVisible: true });
         emailjs
-            .send('service_yvmj3xy', 'template_7sonasa', templateParams)
+            .send(
+                process.env.REACT_EMAILJS_SERVICE_ID,
+                process.env.REACT_EMAILJS_TEMPLATE_ID,
+                templateParams,
+            )
             .then(
                 response => {
                     this.setState({
