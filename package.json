@@ -59,6 +59,7 @@
         "stylelint": "^13.13.1",
         "stylelint-config-prettier": "^8.0.2",
         "stylelint-config-sass-guidelines": "^8.0.0",
-        "stylelint-declaration-use-variable": "^1.7.3"
+        "stylelint-declaration-use-variable": "^1.7.3",
+        "gh-pages": "^3.2.3"
     }
 }
