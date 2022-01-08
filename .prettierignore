@@ -1,6 +1,0 @@
-*.css
-*.scss
-.vs
-bin
-obj
-dist

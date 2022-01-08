@@ -18,7 +18,7 @@ export class MailForm extends React.Component {
             email: '',
             message: '',
         };
-        const user_id_secret = process.env.REACT_EMAILJS_USER_TOKEN;
+        const user_id_secret = process.env.REACT_APP_EMAILJS_USER_TOKEN;
         emailjs.init(user_id_secret);
     }
 
@@ -34,12 +34,12 @@ export class MailForm extends React.Component {
         this.setState({ isPopupVisible: true });
         emailjs
             .send(
-                process.env.REACT_EMAILJS_SERVICE_ID,
-                process.env.REACT_EMAILJS_TEMPLATE_ID,
+                process.env.REACT_APP_EMAILJS_SERVICE_ID,
+                process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
                 templateParams,
             )
             .then(
-                response => {
+                () => {
                     this.setState({
                         popupMessages: ['Successfully'],
                         isRequest: false,
