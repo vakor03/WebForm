@@ -82,7 +82,7 @@ export class MailForm extends React.Component {
                         this.setState({ isPopupVisible: newValue })
                     }>
                     {popupMessages.map(msg => (
-                        <p>{msg}</p>
+                        <p key={msg}>{msg}</p>
                     ))}
                 </Popup>
 

@@ -1,5 +1,6 @@
 {
     "name": "web-form",
+    "homepage": "http://vakor03.github.io/WebForm",
     "version": "0.1.0",
     "private": true,
     "dependencies": {
@@ -21,7 +22,9 @@
         "lint:style": "stylelint --ignore-path .gitignore \"./**/*.css\"",
         "lint:style:fix": "npm run lint:style --ignore-path .gitignore -- --fix",
         "prepare": "husky install",
-        "stylelint-check": "stylelint-config-prettier-check"
+        "stylelint-check": "stylelint-config-prettier-check",
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d build"
     },
     "eslintConfig": {
         "extends": [
