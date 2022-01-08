@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/WebForm/static/css/main.ce4de39f.css",
+    "main.js": "/WebForm/static/js/main.92b4ec78.js",
+    "index.html": "/WebForm/index.html",
+    "main.ce4de39f.css.map": "/WebForm/static/css/main.ce4de39f.css.map",
+    "main.92b4ec78.js.map": "/WebForm/static/js/main.92b4ec78.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ce4de39f.css",
+    "static/js/main.92b4ec78.js"
+  ]
+}
